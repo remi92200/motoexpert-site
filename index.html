@@ -39,7 +39,8 @@
   <section class="relative">
     <div class="relative h-[56vh] md:h-[64vh] bg-cover bg-center" style="background-image:url('hero.png');">
       <!-- assombrissement adouci pour une meilleure lisibilité du texte sur la photo -->
-      <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-zinc-900/10"></div>
+      <!-- overlay assombrie sans bloquer les clics -->
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/60 to-zinc-900/10 pointer-events-none"></div>
       <div class="container mx-auto px-4 h-full flex items-end pb-10">
         <div class="max-w-2xl text-white">
           <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Expertise moto d’occasion</h1>
@@ -78,8 +79,7 @@
     <div class="grid md:grid-cols-3 gap-6 mt-8">
       <!-- Bronze / Basic -->
       <div class="bg-orange-50 rounded-2xl p-6 shadow ring-2 ring-orange-300 relative">
-        <!-- badge: option négociation pour l'offre Bronze -->
-        <div class="absolute top-2 right-2 bg-orange-200 text-orange-600 text-xs font-semibold px-2 py-1 rounded">Option négociation — 20 % du prix négocié</div>
+        <!-- Bronze pack (sans option négociation incluse) -->
         <div class="text-sm text-orange-500">Bronze</div>
         <div class="text-4xl font-extrabold mt-1">89€</div>
         <ul class="mt-4 space-y-2 text-zinc-700">
