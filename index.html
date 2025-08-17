@@ -3,136 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motoexpert - Mécanique moto à domicile</title>
+  <title>Motoexpert Occasion - Expertise moto d'occasion</title>
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white">
+<body class="font-sans antialiased text-gray-800">
   <!-- Hero Section -->
-  <header class="relative py-20 text-center">
-     <div class="max-w-2xl mx-auto px-4">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Motoexpert Perpignan</h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-8">Entretien & réparation de votre moto directement à domicile.</p>
-        <a href="#contact" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Réservez une intervention</a>
-     </div>
+  <header>
+    <!-- Hero image defined using background from hero.png placed in repository root -->
+    <div class="relative h-[60vh] bg-cover bg-center" style="background-image: url('hero.png');">
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Expertise moto d'occasion</h1>
+        <p class="text-lg md:text-xl mb-6 max-w-3xl">Essai routier, contrôle complet, rapport photo et conseils pour acheter votre moto en toute confiance.</p>
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-200">Demander une expertise</a>
+      </div>
+    </div>
   </header>
-  <!-- Offres -->
-  <section id="offres" class="py-16 bg-gray-900">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Nos offres</h2>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-          <h3 class="text-xl font-semibold mb-4">Révision complète</h3>
-          <p class="text-gray-400 mb-4">Un contrôle intégral : vidange, filtres, freins, chaîne, suspensions.</p>
-          <p class="text-blue-400 font-semibold">à partir de 120€</p>
+        <!-- Essai routier -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-50">
+            <!-- Icon: road -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 6l4 12m8-12l4 12M4 18h16"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Essai routier</h3>
+          <p class="text-center">Nous testons la moto sur route pour évaluer moteur, transmission et freinage en conditions réelles.</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-          <h3 class="text-xl font-semibold mb-4">Entretien express</h3>
-          <p class="text-gray-400 mb-4">Vidange et petits réglages pour rouler en sécurité.</p>
-          <p class="text-blue-400 font-semibold">à partir de 60€</p>
+        <!-- Contrôle complet -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-50">
+            <!-- Icon: tools -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-8.728 8.728L9.5 13.5m-3 3l-1.5 1.5m10.414-4.95l3.536-3.536a2 2 0 00-2.828-2.828l-3.536 3.536m-2.121 2.121l-3.536 3.536A2 2 0 106 18l3.536-3.536"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Contrôle complet</h3>
+          <p class="text-center">Inspection approfondie de la mécanique, de l'électronique, des pneus et suspensions pour détecter toute anomalie.</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
-          <h3 class="text-xl font-semibold mb-4">Service pneus</h3>
-          <p class="text-gray-400 mb-4">Montage et équilibrage de vos pneus.</p>
-          <p class="text-blue-400 font-semibold">à partir de 30€/pneu</p>
+        <!-- Rapport photo -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-50">
+            <!-- Icon: camera -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h4l2 4h10a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Rapport photo</h3>
+          <p class="text-center">Vous recevez un rapport détaillé accompagné de photos haute résolution et recommandations personnalisées.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- Process -->
-  <section id="process" class="py-16 bg-gray-950">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Comment ça marche ?</h2>
+
+  <!-- Packages Section -->
+  <section id="offres" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Nos Packs d'expertise</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <div class="text-4xl font-bold mb-2">1</div>
-          <h3 class="text-xl font-semibold mb-2">Réservez</h3>
-          <p class="text-gray-400">Choisissez votre prestation et planifiez votre créneau en ligne ou par téléphone.</p>
+        <!-- Pack Basic -->
+        <div class="border rounded-lg p-6 text-center bg-white hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-4">Pack Basic</h3>
+          <p class="mb-4">Inspection visuelle et vérifications de base.</p>
+          <p class="text-3xl font-extrabold text-blue-600 mb-4">90€</p>
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full">Choisir</a>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">2</div>
-          <h3 class="text-xl font-semibold mb-2">Nous intervenons</h3>
-          <p class="text-gray-400">Un expert se déplace chez vous avec tout le matériel nécessaire.</p>
+        <!-- Pack Standard -->
+        <div class="border rounded-lg p-6 text-center bg-white hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-4">Pack Standard</h3>
+          <p class="mb-4">Contrôle complet + essai routier + rapport photo.</p>
+          <p class="text-3xl font-extrabold text-blue-600 mb-4">120€</p>
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full">Choisir</a>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">3</div>
-          <h3 class="text-xl font-semibold mb-2">Profitez</h3>
-          <p class="text-gray-400">Reprenez la route en toute sérénité avec une moto entretenue.</p>
+        <!-- Pack Premium -->
+        <div class="border rounded-lg p-6 text-center bg-white hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-4">Pack Premium</h3>
+          <p class="mb-4">Service Standard + rapport vidéo et entretien téléphonique.</p>
+          <p class="text-3xl font-extrabold text-blue-600 mb-4">150€</p>
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 rounded-full">Choisir</a>
         </div>
       </div>
     </div>
   </section>
-  <!-- Tarifs -->
-  <section id="tarifs" class="py-16 bg-gray-900">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Exemples de tarifs</h2>
+
+  <!-- Why Choose Section -->
+  <section id="why" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Pourquoi nous choisir ?</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-4">Forfait Révision</h3>
-          <p class="text-gray-400 mb-4">Inclut vidange, remplacement filtre à huile, contrôle des éléments de sécurité.</p>
-          <p class="text-blue-400 font-semibold">120€</p>
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon: shield check -->
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 7-7 10-7 10S5 19 5 12V6l7-4z"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Expertise indépendante</h3>
+          <p>Nos experts certifiés évaluent la moto en toute impartialité pour défendre vos intérêts.</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-4">Forfait Entretien annuel</h3>
-          <p class="text-gray-400 mb-4">Une prise en charge complète sur l'année avec ajustements illimités.</p>
-          <p class="text-blue-400 font-semibold">280€</p>
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon: document for transparence -->
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Transparence totale</h3>
+          <p>Vous recevez un rapport détaillé et illustré point par point pour une décision éclairée.</p>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-4">Service pneus</h3>
-          <p class="text-gray-400 mb-4">Montage et équilibrage de vos pneus.</p>
-          <p class="text-blue-400 font-semibold">30€/pneu</p>
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon: map pin -->
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-blue-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13c-4 0-7 2-7 4v3h14v-3c0-2-3-4-7-4z"></path></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Déplacement sur site</h3>
+          <p>Nous nous déplaçons dans toute la région pour expertiser la moto directement chez le vendeur.</p>
         </div>
-      </div>
-      <p class="text-center text-gray-500 mt-6">Contactez-nous pour un devis personnalisé.</p>
-    </div>
-  </section>
-  <!-- Avis -->
-  <section id="avis" class="py-16 bg-gray-950">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Ils nous font confiance</h2>
-      <div class="space-y-6">
-        <blockquote class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <p class="text-gray-400 italic">Excellent service ! Mon moteur n'a jamais ronronné aussi bien. Intervention rapide et pro.</p>
-          <footer class="mt-2 text-gray-500">— Jean, Perpignan</footer>
-        </blockquote>
-        <blockquote class="bg-gray-800 p-6 rounded-xl shadow-lg">
-          <p class="text-gray-400 italic">Pratique de ne pas avoir à se déplacer. Les prix sont corrects et l'équipe sympathique.</p>
-          <footer class="mt-2 text-gray-500">— Marie, Canet-en-Roussillon</footer>
-        </blockquote>
       </div>
     </div>
   </section>
-  <!-- FAQ -->
-  <section id="faq" class="py-16 bg-gray-900">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Questions fréquentes</h2>
-      <div class="space-y-6">
-        <details class="bg-gray-800 p-6 rounded-lg">
-          <summary class="cursor-pointer font-semibold">Dans quelles zones intervenez-vous ?</summary>
-          <p class="mt-2 text-gray-400">Nous couvrons Perpignan, Cabestany et les environs. Contactez-nous si vous êtes plus loin.</p>
-        </details>
-        <details class="bg-gray-800 p-6 rounded-lg">
-          <summary class="cursor-pointer font-semibold">Quels types de motos entretenez-vous ?</summary>
-          <p class="mt-2 text-gray-400">Nous intervenons sur toutes les marques et cylindrées, qu'il s'agisse de routières, sportives ou scooters.</p>
-        </details>
-        <details class="bg-gray-800 p-6 rounded-lg">
-          <summary class="cursor-pointer font-semibold">Comment puis-je régler ma prestation ?</summary>
-          <p class="mt-2 text-gray-400">Vous pouvez payer par carte, espèces ou virement à la fin de l'intervention.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-  <!-- Contact -->
+
+  <!-- Contact Section -->
   <section id="contact" class="py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact & réservation</h2>
-      <p class="text-gray-400 mb-4">Prêt à prendre rendez-vous ? Appelez-nous ou écrivez-nous, nous vous répondrons rapidement.</p>
-      <p class="mb-4"><a href="tel:+33670000000" class="text-blue-400 hover:underline">06 70 00 00 00</a></p>
-      <p class="mb-4"><a href="mailto:contact@motoexpert.fr" class="text-blue-400 hover:underline">contact@motoexpert.fr</a></p>
-      <a href="#offres" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Nos offres</a>
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact &amp; réservation</h2>
+      <p class="text-center mb-6">Prêt à faire expertiser votre moto d'occasion ? Contactez-nous et prenez rendez-vous.</p>
+      <div class="flex flex-col items-center">
+        <p class="text-xl font-semibold mb-2">06 70 00 00 00</p>
+        <a href="mailto:contact@motoexpert.fr" class="text-blue-600 underline mb-4">contact@motoexpert.fr</a>
+        <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-full">Découvrir nos services</a>
+      </div>
     </div>
   </section>
-  <footer class="py-8 bg-gray-900 text-center text-gray-500">
-    <p>&copy; 2025 Motoexpert. Tous droits réservés.</p>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-white text-center">
+    <p>&copy; 2025 Motoexpert Occasion. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
