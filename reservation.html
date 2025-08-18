@@ -56,8 +56,8 @@
       <label class="text-sm md:col-span-2">Offre choisie
         <select required name="Offre" class="mt-1 w-full rounded-xl border p-3 outline-none">
           <option value="Bronze">Bronze</option>
-          <option value="Argent">Argent</option>
-          <option value="Or">Or</option>
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
         </select>
       </label>
       <label class="text-sm md:col-span-2">Adresse complète
@@ -134,7 +134,7 @@
   </footer>
   <!-- Script de pré-sélection de l'offre dans le formulaire -->
   <script>
-    // Pré-sélectionne l'offre en fonction du paramètre d'URL (offre=bronze|argent|or)
+    // Pré-sélectionne l'offre en fonction du paramètre d'URL (offre=bronze|silver|gold)
     (function() {
       const params = new URLSearchParams(window.location.search);
       const offreParam = params.get('offre');
@@ -143,8 +143,8 @@
         if (select) {
           const val = offreParam.toLowerCase();
           if (val === 'bronze') select.value = 'Bronze';
-          else if (val === 'argent') select.value = 'Argent';
-          else if (val === 'or') select.value = 'Or';
+          else if (val === 'silver') select.value = 'Silver';
+          else if (val === 'gold') select.value = 'Gold';
         }
       }
     })();
