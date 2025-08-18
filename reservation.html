@@ -52,6 +52,14 @@
       <label class="text-sm">Prénom
         <input required name="Prénom" class="mt-1 w-full rounded-xl border p-3 outline-none" placeholder="Marie">
       </label>
+      <!-- Choix de l'offre pour l'utilisateur -->
+      <label class="text-sm md:col-span-2">Offre choisie
+        <select required name="Offre" class="mt-1 w-full rounded-xl border p-3 outline-none">
+          <option value="Bronze">Bronze</option>
+          <option value="Argent">Argent</option>
+          <option value="Or">Or</option>
+        </select>
+      </label>
       <label class="text-sm md:col-span-2">Adresse complète
         <input required name="Adresse" class="mt-1 w-full rounded-xl border p-3 outline-none" placeholder="12 rue des Motards, 66000 Perpignan">
       </label>
@@ -124,5 +132,22 @@
     </div>
     <div class="text-center text-xs text-zinc-500 pb-8">© 2025 MotoExpert Occaz — Tous droits réservés.</div>
   </footer>
+  <!-- Script de pré-sélection de l'offre dans le formulaire -->
+  <script>
+    // Pré-sélectionne l'offre en fonction du paramètre d'URL (offre=bronze|argent|or)
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const offreParam = params.get('offre');
+      if (offreParam) {
+        const select = document.querySelector('select[name="Offre"]');
+        if (select) {
+          const val = offreParam.toLowerCase();
+          if (val === 'bronze') select.value = 'Bronze';
+          else if (val === 'argent') select.value = 'Argent';
+          else if (val === 'or') select.value = 'Or';
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
