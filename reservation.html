@@ -61,13 +61,27 @@
         </select>
       </label>
 
-      <!-- Choix des options supplémentaires -->
-      <label class="text-sm md:col-span-2">Option supplémentaire (facultatif)
-        <select name="Option" class="mt-1 w-full rounded-xl border p-3 outline-none">
-          <option value="">Pas d’option</option>
-          <option value="Negociation">Négociation (20&nbsp;% du prix négocié — offerte si pas de négociation réussie, incluse pour Gold)</option>
-          <option value="2eme_visite">2ème visite de confirmation + 10&nbsp;photos + 1&nbsp;vidéo — 20&nbsp;€</option>
-          <option value="2eme_expertise">2ème expertise pour un véhicule du même modèle — 60&nbsp;€</option>
+      <!-- Choix de la négociation -->
+      <label class="text-sm md:col-span-2">Négociation (option)
+        <select name="Negociation" class="mt-1 w-full rounded-xl border p-3 outline-none">
+          <option value="Non">Non</option>
+          <option value="Oui">Oui</option>
+        </select>
+      </label>
+
+      <!-- Choix de la 2ème visite -->
+      <label class="text-sm md:col-span-2">2ème visite de confirmation (option)
+        <select name="DeuxiemeVisite" class="mt-1 w-full rounded-xl border p-3 outline-none">
+          <option value="Non">Non</option>
+          <option value="Oui">Oui</option>
+        </select>
+      </label>
+
+      <!-- Choix de la 2ème expertise -->
+      <label class="text-sm md:col-span-2">2ème expertise pour un véhicule du même modèle (option)
+        <select name="DeuxiemeExpertise" class="mt-1 w-full rounded-xl border p-3 outline-none">
+          <option value="Non">Non</option>
+          <option value="Oui">Oui</option>
         </select>
       </label>
       <label class="text-sm md:col-span-2">Adresse complète
