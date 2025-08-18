@@ -45,7 +45,8 @@
       <!-- overlay encore plus léger pour rendre le texte plus lumineux -->
       <div class="absolute inset-0 bg-gradient-to-t from-zinc-900/15 to-zinc-900/0 pointer-events-none"></div>
       <div class="container mx-auto px-4 h-full flex items-end pb-20">
-        <div class="max-w-2xl text-white">
+        <!-- Décalage vers la gauche sur les écrans moyens et larges pour éviter de chevaucher la moto -->
+        <div class="max-w-2xl text-white md:-ml-16 lg:-ml-20 md:-mt-8 lg:-mt-12">
           <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Expertise moto d’occasion</h1>
           <!-- Tagline plus brillante pour une meilleure lisibilité -->
           <!-- Tagline encore plus brillante pour meilleure lisibilité -->
@@ -60,10 +61,10 @@
              Affiché uniquement sur écran moyen et plus large (md) pour éviter de surcharger l'affichage sur mobile.
              Positionnement absolu pour être placé en haut à droite sans perturber la mise en page existante. -->
         <div class="hidden md:block absolute top-8 right-4 md:right-8 max-w-sm text-right">
-          <p class="text-amber-300 text-lg font-semibold drop-shadow-md">
+          <p class="text-amber-300 text-2xl font-semibold drop-shadow-md">
             Pour l’achat de votre moto d’occasion : on y va pour vous ou avec vous — achat 100 % serein.
           </p>
-          <p class="mt-1 text-white text-sm font-medium drop-shadow-md">
+          <p class="mt-1 text-white text-lg font-medium drop-shadow-md">
             Pré‑expertise à distance avant de vous déplacer, ou accompagnement d’un expert sur place.
           </p>
         </div>
